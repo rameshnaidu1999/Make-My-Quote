@@ -7,7 +7,7 @@ var db
 
 MongoClient.connect(
     'mongodb+srv://Ramesh:ramesh123@cluster0-n5l8y.mongodb.net/test?retryWrites=true&w=majority',
-    { useUnifiedTopology: true }, (err, client) => {
+    {  useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
   if (err) return console.log(err)
   db = client.db('star-wars-quotes') // whatever your database name is
 });
